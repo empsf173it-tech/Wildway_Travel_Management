@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WildWay Travel - Contact Us</title>
+    
+    <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body style="background: url('https://images.unsplash.com/photo-1516387938699-a93567ec168e?q=80&w=1920&auto=format&fit=crop') no-repeat center center fixed; background-size: 100% 100%;">
+
+    <!-- Header / Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="assets/images/logo.svg" alt="WildWay Logo" width="30" height="30">
+                WildWay Travel
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="mainMenu">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <a href="signup.html" class="btn btn-primary-custom">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Offcanvas Menu -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="mobileMenuLabel">WildWay Travel</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column">
+            <ul class="navbar-nav flex-grow-1">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+            </ul>
+            <div class="d-grid gap-2 mt-4">
+                <a href="signup.html" class="btn btn-primary-custom">Sign Up</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));">
+        <div class="container hero-content text-center">
+            <h1 class="display-4 fw-bold mb-3 animate-up text-white">Contact Us</h1>
+            <p class="lead text-light animate-up" style="animation-delay: 0.1s;">We'd love to hear from you. Reach out with any questions!</p>
+        </div>
+    </section>
+
+    <!-- Contact Form & Info -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Contact Info -->
+                <div class="col-lg-5 animate-up">
+                    <h3 class="fw-bold mb-4" style="color:#ffffff;">Get In Touch</h3>
+                    <p style="color:#cccccc;" class="mb-4">Whether you need help booking a trip or want to learn more about our services, our team is ready to assist you 24/7.</p>
+                    
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="bg-primary bg-opacity-10 text-primary rounded-circle p-3 me-3">
+                            <i class="bi bi-geo-alt-fill fs-4"></i>
+                        </div>
+                        <div>
+                            <h6 class="fw-bold mb-1" style="color:#ffffff;">Our Location</h6>
+                            <p style="color:#aaaaaa;" class="mb-0">123 Adventure Lane, Wanderlust City, WL 45678</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="bg-primary bg-opacity-10 text-primary rounded-circle p-3 me-3">
+                            <i class="bi bi-telephone-fill fs-4"></i>
+                        </div>
+                        <div>
+                            <h6 class="fw-bold mb-1" style="color:#ffffff;">Phone Number</h6>
+                            <p style="color:#aaaaaa;" class="mb-0">+1 (800) 123-4567</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="bg-primary bg-opacity-10 text-primary rounded-circle p-3 me-3">
+                            <i class="bi bi-envelope-fill fs-4"></i>
+                        </div>
+                        <div>
+                            <h6 class="fw-bold mb-1" style="color:#ffffff;">Email Address</h6>
+                            <p style="color:#aaaaaa;" class="mb-0">support@wildwaytravel.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-5">
+                        <h6 class="fw-bold mb-3" style="color:#ffffff;">Follow Us</h6>
+                        <div class="d-flex gap-3 social-links-contact">
+                            <a href="#" class="social-icon"><i class="bi bi-facebook fs-5"></i></a>
+                            <a href="#" class="social-icon"><i class="bi bi-twitter-x fs-5"></i></a>
+                            <a href="#" class="social-icon"><i class="bi bi-instagram fs-5"></i></a>
+                            <a href="#" class="social-icon"><i class="bi bi-youtube fs-5"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="col-lg-7 animate-up" style="animation-delay: 0.2s;">
+                    <div class="card border-0 shadow-sm p-4 p-md-5 bg-white">
+                        <h4 class="fw-bold mb-4">Send Us a Message</h4>
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">Your Name</label>
+                                    <input type="text" class="form-control" placeholder="John Doe" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">Email Address</label>
+                                    <input type="email" class="form-control" placeholder="john@example.com" required>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label fw-semibold">Subject</label>
+                                    <input type="text" class="form-control" placeholder="How can we help?" required>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label fw-semibold">Message</label>
+                                    <textarea class="form-control" rows="5" placeholder="Write your message here..." required></textarea>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <button type="submit" class="btn btn-primary-custom w-100 py-2">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Global Offices -->
+    <section class="section-padding bg-light">
+        <div class="container text-center">
+            <h2 class="section-title animate-up">Our Global Offices</h2>
+            <p style="color:#aaaaaa;" class="mb-5 animate-up" style="animation-delay: 0.1s;">Visit us at any of our flagship locations around the world.</p>
+            <div class="row g-4">
+                <div class="col-md-4 animate-up" style="animation-delay: 0.2s;">
+                    <div class="card border-0 shadow-sm h-100">
+                        <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?q=80&w=600&auto=format&fit=crop" alt="New York Office" class="card-img-top" style="height: 200px; object-fit: cover;">
+                        <div class="card-body text-center">
+                            <h5 class="fw-bold">New York, USA</h5>
+                            <p style="color:#aaaaaa;" class="small">123 Broadway, NY 10001<br>+1 (212) 555-0198</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 animate-up" style="animation-delay: 0.3s;">
+                    <div class="card border-0 shadow-sm h-100">
+                        <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=600&auto=format&fit=crop" alt="London Office" class="card-img-top" style="height: 200px; object-fit: cover;">
+                        <div class="card-body text-center">
+                            <h5 class="fw-bold">London, UK</h5>
+                            <p style="color:#aaaaaa;" class="small">45 Oxford St, London W1D<br>+44 20 7946 0958</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 animate-up" style="animation-delay: 0.4s;">
+                    <div class="card border-0 shadow-sm h-100">
+                        <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=600&auto=format&fit=crop" alt="Tokyo Office" class="card-img-top" style="height: 200px; object-fit: cover;">
+                        <div class="card-body text-center">
+                            <h5 class="fw-bold">Tokyo, Japan</h5>
+                            <p style="color:#aaaaaa;" class="small">1-1 Chiyoda, Tokyo 100-8111<br>+81 3-5555-0198</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet the Support Team -->
+    <section class="section-padding">
+        <div class="container text-center">
+            <h2 class="section-title animate-up">Meet The Support Team</h2>
+            <p style="color:#cccccc;" class="mb-5 animate-up" style="animation-delay: 0.1s;">The friendly faces behind our 24/7 customer service.</p>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-3 animate-up" style="animation-delay: 0.2s;">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=300&auto=format&fit=crop" alt="Support Agent 1" class="rounded-circle mb-3 shadow" width="120" height="120" style="object-fit: cover;">
+                    <h5 class="fw-bold mb-1" style="color:#ffffff;">Emily R.</h5>
+                    <p style="color:#aaaaaa;" class="small">Booking Specialist</p>
+                </div>
+                <div class="col-md-3 animate-up" style="animation-delay: 0.3s;">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=300&auto=format&fit=crop" alt="Support Agent 2" class="rounded-circle mb-3 shadow" width="120" height="120" style="object-fit: cover;">
+                    <h5 class="fw-bold mb-1" style="color:#ffffff;">David L.</h5>
+                    <p style="color:#aaaaaa;" class="small">Visa Consultant</p>
+                </div>
+                <div class="col-md-3 animate-up" style="animation-delay: 0.4s;">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=300&auto=format&fit=crop" alt="Support Agent 3" class="rounded-circle mb-3 shadow" width="120" height="120" style="object-fit: cover;">
+                    <h5 class="fw-bold mb-1" style="color:#ffffff;">Sophia M.</h5>
+                    <p style="color:#aaaaaa;" class="small">Customer Success</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="text-white fw-bold mb-3 d-flex align-items-center gap-2">
+                        <img src="assets/images/logo.svg" alt="WildWay Logo" width="24" height="24"> WildWay Travel
+                    </h5>
+                    <p class="text-secondary">Making your travel dreams a reality with expertly crafted itineraries and uncompromised service.</p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="text-white fw-bold mb-3">Company</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">About Us</a></li>
+                        <li class="mb-2"><a href="#">Careers</a></li>
+                        <li class="mb-2"><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="text-white fw-bold mb-3">Support</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="faq.html">FAQ</a></li>
+                        <li class="mb-2"><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="text-white fw-bold mb-3">Newsletter</h6>
+                    <p class="text-secondary small">Get the latest travel updates and offers directly in your inbox.</p>
+                    <form class="d-flex">
+                        <input type="email" class="form-control form-control-sm me-2 bg-dark border-secondary text-white" placeholder="Email">
+                        <button type="submit" class="btn btn-primary-custom btn-sm">Join</button>
+                    </form>
+                </div>
+            </div>
+            <hr class="border-secondary mt-5 mb-4">
+            <div class="text-center text-secondary small">
+                &copy; 2026 WildWay Travel. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top -->
+    <a href="#" class="back-to-top shadow" id="backToTop"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+

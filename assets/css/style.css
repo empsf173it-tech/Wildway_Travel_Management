@@ -1,0 +1,446 @@
+:root {
+    --primary-color: #008080;
+    --secondary-color: #FF7F50;
+    --tertiary-color: #F4A460;
+    --text-color: #2c3e50;
+    --footer-bg: rgba(26, 26, 26, 0.9);
+    --footer-text: #ffffff;
+}
+
+[data-theme="dark"] {
+    --text-color: #f0f0f0;
+    --footer-bg: rgba(10, 10, 10, 0.9);
+    --primary-color: #00cccc;
+    --secondary-color: #FF9070;
+}
+
+/* =============================================
+   BASE BODY - Dark theme always active
+   ============================================= */
+body {
+    background-attachment: fixed;
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    transition: color 0.3s ease;
+}
+
+/* Dark mode: all text defaults to bright white */
+[data-theme="dark"] body {
+    color: #f0f0f0;
+}
+
+/* =============================================
+   TYPOGRAPHY
+   ============================================= */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--text-color);
+}
+
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6 {
+    color: #ffffff;
+}
+
+p {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] p {
+    color: #d0d0d0;
+}
+
+/* Override Bootstrap muted text in dark mode */
+[data-theme="dark"] .text-muted {
+    color: #aaaaaa !important;
+}
+
+[data-theme="dark"] .lead {
+    color: #cccccc;
+}
+
+/* =============================================
+   GLASSMORPHISM CARDS & SECTIONS
+   ============================================= */
+.bg-light, .bg-white {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+[data-theme="dark"] .bg-light,
+[data-theme="dark"] .bg-white {
+    background-color: rgba(22, 22, 22, 0.92) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #f0f0f0;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="dark"] .card {
+    background-color: rgba(22, 22, 22, 0.93);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    color: #f0f0f0;
+}
+[data-theme="dark"] .card:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7);
+}
+
+/* All text inside cards should be bright in dark mode */
+[data-theme="dark"] .card-title,
+[data-theme="dark"] .card-body h1,
+[data-theme="dark"] .card-body h2,
+[data-theme="dark"] .card-body h3,
+[data-theme="dark"] .card-body h4,
+[data-theme="dark"] .card-body h5,
+[data-theme="dark"] .card-body h6 {
+    color: #ffffff;
+}
+[data-theme="dark"] .card-body p,
+[data-theme="dark"] .card-text {
+    color: #cccccc;
+}
+[data-theme="dark"] .card .text-muted {
+    color: #aaaaaa !important;
+}
+
+/* =============================================
+   SECTIONS — ensure text pops over background
+   ============================================= */
+section {
+    position: relative;
+}
+
+[data-theme="dark"] section h1,
+[data-theme="dark"] section h2,
+[data-theme="dark"] section h3,
+[data-theme="dark"] section h4,
+[data-theme="dark"] section h5,
+[data-theme="dark"] section h6 {
+    color: #ffffff;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.8);
+}
+
+[data-theme="dark"] section p {
+    color: #d4d4d4;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.7);
+}
+
+/* Text sitting directly on background (not in a card) */
+[data-theme="dark"] section > .container *:not(.card):not(.card *):not(.btn):not(.badge) {
+    text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+}
+
+/* =============================================
+   NAVBAR
+   ============================================= */
+.navbar {
+    background-color: transparent !important;
+    backdrop-filter: none;
+    box-shadow: none;
+    transition: all 0.4s ease;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+.navbar.scrolled {
+    background-color: rgba(15, 15, 15, 0.95) !important;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.navbar-brand {
+    color: var(--primary-color) !important;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-shadow: none;
+}
+.nav-link {
+    color: #ffffff !important;
+    font-weight: 500;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.8);
+}
+.nav-link:hover {
+    color: var(--secondary-color) !important;
+}
+.navbar.scrolled .nav-link {
+    color: #e0e0e0 !important;
+    text-shadow: none;
+}
+
+/* =============================================
+   BUTTONS
+   ============================================= */
+.btn-primary-custom {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 15px rgba(0, 128, 128, 0.3);
+    text-shadow: none;
+}
+.btn-primary-custom:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(255, 127, 80, 0.5);
+    color: #fff;
+}
+
+/* =============================================
+   HERO SECTION
+   ============================================= */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    color: white;
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+.hero-section h1,
+.hero-section h2,
+.hero-section p {
+    color: #ffffff;
+    text-shadow: 0 3px 20px rgba(0,0,0,0.9), 0 1px 4px rgba(0,0,0,0.8);
+}
+
+/* =============================================
+   ANIMATIONS
+   ============================================= */
+.animate-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.animate-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =============================================
+   SERVICE CARDS
+   ============================================= */
+.service-card {
+    border-radius: 12px;
+    overflow: hidden;
+    height: 100%;
+}
+.service-card img {
+    height: 300px;
+    object-fit: cover;
+    width: 100%;
+}
+[data-theme="dark"] .service-card .card-title,
+[data-theme="dark"] .service-card .fw-bold {
+    color: #ffffff;
+}
+[data-theme="dark"] .service-card .small,
+[data-theme="dark"] .service-card p {
+    color: #bbbbbb !important;
+}
+
+/* =============================================
+   ACCORDION / FAQ
+   ============================================= */
+[data-theme="dark"] .accordion-item {
+    background-color: rgba(22, 22, 22, 0.93);
+    border: 1px solid rgba(255,255,255,0.08);
+    color: #f0f0f0;
+}
+[data-theme="dark"] .accordion-button {
+    background-color: rgba(30, 30, 30, 0.95);
+    color: #ffffff;
+    box-shadow: none;
+}
+[data-theme="dark"] .accordion-button:not(.collapsed) {
+    background-color: rgba(0, 170, 170, 0.2);
+    color: #00cccc;
+}
+[data-theme="dark"] .accordion-button::after {
+    filter: invert(1);
+}
+[data-theme="dark"] .accordion-body {
+    color: #cccccc;
+    background-color: rgba(22, 22, 22, 0.93);
+}
+
+/* =============================================
+   LIST GROUPS & BADGES
+   ============================================= */
+[data-theme="dark"] .list-group-item {
+    background-color: rgba(30,30,30,0.9);
+    border-color: rgba(255,255,255,0.08);
+    color: #e0e0e0;
+}
+
+[data-theme="dark"] .badge.bg-primary {
+    background-color: var(--primary-color) !important;
+    color: #fff;
+}
+
+/* =============================================
+   FOOTER
+   ============================================= */
+footer {
+    background-color: var(--footer-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    color: #f0f0f0;
+    padding: 80px 0 30px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+footer h5, footer h6 {
+    color: #ffffff;
+}
+footer p, footer li {
+    color: #cccccc;
+}
+footer a {
+    color: #aaaaaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+footer a:hover {
+    color: var(--secondary-color);
+}
+
+/* =============================================
+   BACK TO TOP
+   ============================================= */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--primary-color);
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 999;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+.back-to-top:hover {
+    background-color: var(--secondary-color);
+    color: white;
+    transform: translateY(-5px);
+}
+
+/* =============================================
+   CONTACT SOCIAL ICONS
+   ============================================= */
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255,255,255,0.15);
+    backdrop-filter: blur(5px);
+    color: #fff;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+.social-icon:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 170, 170, 0.5);
+}
+
+/* =============================================
+   FORM INPUTS IN DARK MODE
+   ============================================= */
+[data-theme="dark"] .form-control,
+[data-theme="dark"] .form-select {
+    background-color: rgba(40, 40, 40, 0.9);
+    border-color: rgba(255,255,255,0.15);
+    color: #f0f0f0;
+}
+[data-theme="dark"] .form-control::placeholder {
+    color: #888;
+}
+[data-theme="dark"] .form-control:focus,
+[data-theme="dark"] .form-select:focus {
+    background-color: rgba(50, 50, 50, 0.95);
+    border-color: var(--primary-color);
+    color: #f0f0f0;
+    box-shadow: 0 0 0 3px rgba(0, 170, 170, 0.2);
+}
+[data-theme="dark"] .form-label {
+    color: #cccccc;
+}
+[data-theme="dark"] .input-group-text {
+    background-color: rgba(40,40,40,0.9);
+    border-color: rgba(255,255,255,0.15);
+    color: #aaa;
+}
+
+/* =============================================
+   GENERAL UTILITIES
+   ============================================= */
+.section-padding {
+    padding: 100px 0;
+}
+.section-title {
+    color: var(--primary-color);
+    margin-bottom: 50px;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+}
+[data-theme="dark"] .section-title {
+    color: var(--secondary-color);
+    text-shadow: 0 2px 12px rgba(0,0,0,0.8);
+}
+
+/* Force Bootstrap text utility overrides in dark mode */
+[data-theme="dark"] .fw-bold,
+[data-theme="dark"] strong {
+    color: #ffffff;
+}
+[data-theme="dark"] small {
+    color: #aaaaaa;
+}

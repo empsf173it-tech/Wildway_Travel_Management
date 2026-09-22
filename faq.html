@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WildWay Travel - FAQ</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body style="background: url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1920&auto=format&fit=crop') no-repeat center center fixed; background-size: 100% 100%;">
+
+    <!-- Header / Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="assets/images/logo.svg" alt="WildWay Logo" width="30" height="30">
+                WildWay Travel
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="mainMenu">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="faq.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <a href="signup.html" class="btn btn-primary-custom">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Offcanvas Menu -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="mobileMenuLabel">WildWay Travel</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column">
+            <ul class="navbar-nav flex-grow-1">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+            <div class="d-grid gap-2 mt-4">
+                <a href="signup.html" class="btn btn-primary-custom">Sign Up</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));">
+        <div class="container hero-content text-center">
+            <h1 class="display-4 fw-bold mb-3 animate-up text-white">Frequently Asked Questions</h1>
+            <p class="lead text-light animate-up" style="animation-delay: 0.1s;">Find answers to common questions about our services.</p>
+        </div>
+    </section>
+
+    <!-- Popular Topics -->
+    <section class="section-padding bg-light pb-0">
+        <div class="container text-center">
+            <h2 class="section-title animate-up">Popular Topics</h2>
+            <div class="row g-4 mt-3">
+                <div class="col-md-4 animate-up" style="animation-delay: 0.1s;">
+                    <div class="card border-0 shadow-sm p-4 h-100 text-center">
+                        <i class="bi bi-credit-card fs-1 text-primary mb-3"></i>
+                        <h5 class="fw-bold">Payments &amp; Billing</h5>
+                        <p class="mb-0" style="color:#aaaaaa;">Information on payment methods, refunds, and pricing.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 animate-up" style="animation-delay: 0.2s;">
+                    <div class="card border-0 shadow-sm p-4 h-100 text-center">
+                        <i class="bi bi-airplane fs-1 text-primary mb-3"></i>
+                        <h5 class="fw-bold">Booking &amp; Cancellations</h5>
+                        <p class="mb-0" style="color:#aaaaaa;">How to manage your trips and cancellation policies.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 animate-up" style="animation-delay: 0.3s;">
+                    <div class="card border-0 shadow-sm p-4 h-100 text-center">
+                        <i class="bi bi-shield-check fs-1 text-primary mb-3"></i>
+                        <h5 class="fw-bold">Safety &amp; Insurance</h5>
+                        <p class="mb-0" style="color:#aaaaaa;">Travel insurance details and safety guidelines.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section-padding">
+        <div class="container max-w-800 mx-auto" style="max-width: 800px;">
+            <div class="accordion" id="faqAccordion">
+                
+                <div class="accordion-item border-0 mb-3 shadow-sm rounded overflow-hidden animate-up">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" style="background:rgba(30,30,30,0.95); color:#ffffff;">
+                            How do I book a tour package?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body" style="background:rgba(22,22,22,0.95); color:#cccccc;">
+                            You can easily book a tour package by browsing our Services page, selecting the package you are interested in, and following the on-screen instructions to secure your reservation. Alternatively, you can contact our 24/7 support for assistance.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="accordion-item border-0 mb-3 shadow-sm rounded overflow-hidden animate-up" style="animation-delay: 0.1s;">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="background:rgba(30,30,30,0.95); color:#ffffff;">
+                            What payment methods do you accept?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body" style="background:rgba(22,22,22,0.95); color:#cccccc;">
+                            We accept all major credit and debit cards, including Visa, MasterCard, and American Express. We also support digital wallets such as PayPal, Apple Pay, and Google Pay for secure and convenient transactions.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="accordion-item border-0 mb-3 shadow-sm rounded overflow-hidden animate-up" style="animation-delay: 0.2s;">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="background:rgba(30,30,30,0.95); color:#ffffff;">
+                            What is your cancellation policy?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body" style="background:rgba(22,22,22,0.95); color:#cccccc;">
+                            Our cancellation policy varies depending on the specific service or package booked. Generally, cancellations made 30 days prior to departure receive a full refund. Please review the detailed terms during checkout or contact support for specifics.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="accordion-item border-0 mb-3 shadow-sm rounded overflow-hidden animate-up" style="animation-delay: 0.3s;">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" style="background:rgba(30,30,30,0.95); color:#ffffff;">
+                            Do you provide travel insurance?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body" style="background:rgba(22,22,22,0.95); color:#cccccc;">
+                            Yes, we offer comprehensive travel insurance options covering trip cancellations, medical emergencies, and lost baggage. You can add insurance to your booking during the checkout process.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="accordion-item border-0 mb-3 shadow-sm rounded overflow-hidden animate-up" style="animation-delay: 0.4s;">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" style="background:rgba(30,30,30,0.95); color:#ffffff;">
+                            Are your local guides certified?
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body" style="background:rgba(22,22,22,0.95); color:#cccccc;">
+                            Absolutely. All our local guides are highly experienced and certified professionals who are passionate about sharing their deep knowledge of the destination's culture, history, and hidden gems.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Still Have Questions CTA -->
+    <section class="section-padding text-white" style="background: linear-gradient(rgba(0,128,128,0.8), rgba(0,128,128,0.8)), url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1920&auto=format&fit=crop') center/cover;">
+        <div class="container text-center py-5">
+            <h2 class="fw-bold mb-3 animate-up">Still Have Questions?</h2>
+            <p class="lead mb-4 animate-up" style="animation-delay: 0.1s;">If you couldn't find the answer to your question, our support team is here to help.</p>
+            <a href="contact.html" class="btn btn-light btn-lg px-5 animate-up" style="animation-delay: 0.2s;">Contact Support</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="text-white fw-bold mb-3 d-flex align-items-center gap-2">
+                        <img src="assets/images/logo.svg" alt="WildWay Logo" width="24" height="24"> WildWay
+                    </h5>
+                    <p class="text-secondary">Making your travel dreams a reality with expertly crafted itineraries and uncompromised service.</p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="text-white fw-bold mb-3">Company</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">About Us</a></li>
+                        <li class="mb-2"><a href="#">Careers</a></li>
+                        <li class="mb-2"><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="text-white fw-bold mb-3">Support</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">Help Center</a></li>
+                        <li class="mb-2"><a href="faq.html">FAQ</a></li>
+                        <li class="mb-2"><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="text-white fw-bold mb-3">Newsletter</h6>
+                    <p class="text-secondary small">Get the latest travel updates and offers directly in your inbox.</p>
+                    <form class="d-flex">
+                        <input type="email" class="form-control form-control-sm me-2 bg-dark border-secondary text-white" placeholder="Email">
+                        <button type="submit" class="btn btn-primary-custom btn-sm">Join</button>
+                    </form>
+                </div>
+            </div>
+            <hr class="border-secondary mt-5 mb-4">
+            <div class="text-center text-secondary small">
+                &copy; 2026 WildWay Travel. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top -->
+    <a href="#" class="back-to-top shadow" id="backToTop"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+
