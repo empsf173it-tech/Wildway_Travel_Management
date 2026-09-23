@@ -18,7 +18,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body style="background: url('https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?q=80&w=1920&auto=format&fit=crop') no-repeat center center fixed; background-size: 100% 100%;">
+<body>
 
     <!-- Header / Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top">
@@ -36,6 +36,9 @@
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="services.html">Services</a>
@@ -61,12 +64,16 @@
     <!-- Mobile Offcanvas Menu -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="mobileMenuLabel">WildWay Travel</h5>
+            <a class="navbar-brand d-flex align-items-center gap-2 offcanvas-title" id="mobileMenuLabel" href="index.html">
+                <img src="assets/images/logo.svg" alt="WildWay Logo" width="30" height="30">
+                WildWay Travel
+            </a>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body d-flex flex-column">
-            <ul class="navbar-nav flex-grow-1">
+            <ul class="navbar-nav mb-4">
                 <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                 <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
                 <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
@@ -79,7 +86,7 @@
     </div>
 
     <!-- Hero Section -->
-    <section class="hero-section" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));">
+    <section class="hero-section" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?q=80&w=1920&auto=format&fit=crop') no-repeat center center; background-size: cover;">
         <div class="container hero-content text-center">
             <h1 class="display-3 fw-bold mb-4 animate-up">Explore the World <br>With Wonder</h1>
             <p class="lead mb-5 animate-up" style="animation-delay: 0.2s;">Discover breathtaking destinations, exclusive deals, and unforgettable experiences tailored just for you.</p>
@@ -91,7 +98,7 @@
     </section>
 
     <!-- Features Section (Section 2) -->
-    <section class="section-padding">
+    <section class="section-padding bg-alternate">
         <div class="container">
             <div class="row g-4 text-center">
                 <div class="col-md-4 animate-up">
@@ -120,7 +127,7 @@
     </section>
 
     <!-- Popular Destinations (Section 3) -->
-    <section id="destinations" class="section-padding bg-light">
+    <section id="destinations" class="section-padding">
         <div class="container">
             <h2 class="section-title animate-up">Popular Destinations</h2>
             <div class="row g-4">
@@ -159,7 +166,7 @@
     </section>
 
     <!-- About Us Snippet (Section 4) -->
-    <section class="section-padding">
+    <section class="section-padding bg-alternate">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 animate-up">
@@ -180,7 +187,7 @@
     </section>
 
     <!-- Testimonials (Section 5) -->
-    <section class="section-padding bg-light">
+    <section class="section-padding">
         <div class="container text-center">
             <h2 class="section-title animate-up">What Our Clients Say</h2>
             <div class="row g-4 justify-content-center mt-4">
@@ -229,9 +236,10 @@
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6">
-                    <h5 class="text-white fw-bold mb-3 d-flex align-items-center gap-2">
-                        <img src="assets/images/logo.svg" alt="WildWay Logo" width="24" height="24"> WildWay
-                    </h5>
+                    <a class="navbar-brand d-inline-flex align-items-center gap-2 mb-3" href="index.html" style="padding: 0;">
+                        <img src="assets/images/logo.svg" alt="WildWay Logo" width="30" height="30">
+                        WildWay Travel
+                    </a>
                     <p class="text-secondary">Making your travel dreams a reality with expertly crafted itineraries and uncompromised service.</p>
                     <div class="d-flex gap-3 mt-3">
                         <a href="#"><i class="bi bi-facebook fs-5"></i></a>

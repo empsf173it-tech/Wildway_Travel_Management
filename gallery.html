@@ -30,8 +30,9 @@
             box-shadow: 0 5px 15px rgba(255,255,255,0.05);
         }
     </style>
+<link rel="icon" href="assets/images/logo.svg" type="image/svg+xml">
 </head>
-<body style="background: url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=1920&auto=format&fit=crop') no-repeat center center fixed; background-size: 100% 100%;">
+<body>
 
     <!-- Header / Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top">
@@ -41,18 +42,32 @@
                 WildWay Travel
             </a>
             
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
             
             <div class="collapse navbar-collapse" id="mainMenu">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
                 </ul>
+                
                 <div class="d-flex align-items-center gap-3">
                     <a href="signup.html" class="btn btn-primary-custom">Sign Up</a>
                 </div>
@@ -63,12 +78,16 @@
     <!-- Mobile Offcanvas Menu -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="mobileMenuLabel">WildWay Travel</h5>
+            <a class="navbar-brand d-flex align-items-center gap-2 offcanvas-title" id="mobileMenuLabel" href="index.html">
+                <img src="assets/images/logo.svg" alt="WildWay Logo" width="30" height="30">
+                WildWay Travel
+            </a>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body d-flex flex-column">
-            <ul class="navbar-nav flex-grow-1">
+            <ul class="navbar-nav mb-4">
                 <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                 <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
                 <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
@@ -81,10 +100,12 @@
     </div>
 
     <!-- Hero Section -->
-    <section class="hero-section" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));">
+    <section class="hero-section" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1920&auto=format&fit=crop') no-repeat center center; background-size: cover;">
         <div class="container hero-content text-center">
             <h1 class="display-4 fw-bold mb-3 animate-up text-white">Our Gallery</h1>
-            <p class="lead text-light animate-up" style="animation-delay: 0.1s;">Glimpses of the beautiful destinations we offer.</p>
+            <p class="lead text-light animate-up mb-2" style="animation-delay: 0.1s;">Glimpses of the beautiful destinations we offer.</p>
+            <p class="text-light animate-up mb-2" style="animation-delay: 0.2s; max-width: 600px; margin: 0 auto; opacity: 0.9;">From sun-kissed beaches to majestic mountain peaks, every journey is a masterpiece waiting to be explored.</p>
+            <p class="text-light animate-up" style="animation-delay: 0.3s; max-width: 600px; margin: 0 auto; opacity: 0.9;">Browse through our curated collection of memories, immerse yourself in global cultures, and get inspired for your very next adventure with WildWay Travel.</p>
         </div>
     </section>
 
@@ -178,10 +199,17 @@
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6">
-                    <h5 class="text-white fw-bold mb-3 d-flex align-items-center gap-2">
-                        <img src="assets/images/logo.svg" alt="WildWay Logo" width="24" height="24"> WildWay
-                    </h5>
+                    <a class="navbar-brand d-inline-flex align-items-center gap-2 mb-3" href="index.html" style="padding: 0;">
+                        <img src="assets/images/logo.svg" alt="WildWay Logo" width="30" height="30">
+                        WildWay Travel
+                    </a>
                     <p class="text-secondary">Making your travel dreams a reality with expertly crafted itineraries and uncompromised service.</p>
+                    <div class="d-flex gap-3 mt-3">
+                        <a href="#"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#"><i class="bi bi-twitter-x fs-5"></i></a>
+                        <a href="#"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#"><i class="bi bi-youtube fs-5"></i></a>
+                    </div>
                 </div>
                 <div class="col-lg-2 col-md-6">
                     <h6 class="text-white fw-bold mb-3">Company</h6>
@@ -189,13 +217,15 @@
                         <li class="mb-2"><a href="#">About Us</a></li>
                         <li class="mb-2"><a href="#">Careers</a></li>
                         <li class="mb-2"><a href="#">Blog</a></li>
+                        <li class="mb-2"><a href="#">Press</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-2 col-md-6">
                     <h6 class="text-white fw-bold mb-3">Support</h6>
                     <ul class="list-unstyled">
                         <li class="mb-2"><a href="#">Help Center</a></li>
-                        <li class="mb-2"><a href="faq.html">FAQ</a></li>
+                        <li class="mb-2"><a href="#">Safety</a></li>
+                        <li class="mb-2"><a href="#">Cancellation Options</a></li>
                         <li class="mb-2"><a href="#">Contact Us</a></li>
                     </ul>
                 </div>

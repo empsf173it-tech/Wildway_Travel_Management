@@ -41,7 +41,11 @@
             transition: all 0.3s;
         }
         .social-btn:hover {
-            background-color: var(--card-bg);
+            background-color: rgba(0, 128, 128, 0.05);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-color: var(--primary-color);
+            color: var(--primary-color);
         }
         [data-theme="dark"] .social-btn {
             border-color: #444;
@@ -74,6 +78,7 @@
         }
         .cursor-pointer { cursor: pointer; }
     </style>
+<link rel="icon" href="assets/images/logo.svg" type="image/svg+xml">
 </head>
 <body style="background: url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=1920&auto=format&fit=crop') no-repeat center center fixed; background-size: 100% 100%;">
 
@@ -81,10 +86,10 @@
         <div class="auth-card animate-up">
 
             <div class="text-center mb-4 mt-2">
-                <a href="index.html" class="d-inline-flex align-items-center justify-content-center gap-2 text-decoration-none mb-3">
-                    <img src="assets/images/logo.svg" alt="WildWay Logo" width="32" height="32">
-                    <h4 class="fw-bold mb-0" style="color: var(--text-color);">WildWay Travel</h4>
-                </a>
+                <a class="navbar-brand d-inline-flex align-items-center justify-content-center gap-2 mb-3" href="index.html" style="padding: 0;">
+                      <img src="assets/images/logo.svg" alt="WildWay Logo" width="30" height="30">
+                      WildWay Travel
+                  </a>
                 <h5 class="fw-bold">Create Account</h5>
                 <p class="text-muted small mb-0">Start your journey with WildWay</p>
             </div>

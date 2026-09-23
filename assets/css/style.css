@@ -18,16 +18,18 @@
    BASE BODY - Dark theme always active
    ============================================= */
 body {
+    background-color: #fdfbf7; /* Soft warm cream instead of pure white */
     background-attachment: fixed;
     color: var(--text-color);
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    transition: color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Dark mode: all text defaults to bright white */
 [data-theme="dark"] body {
     color: #f0f0f0;
+    background-color: #0f1717; /* Deep rich dark teal */
 }
 
 /* =============================================
@@ -76,11 +78,20 @@ p {
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.6);
 }
+
+.bg-alternate {
+    background-color: #f2f9f9 !important; /* Soft teal */
+}
+
 [data-theme="dark"] .bg-light,
 [data-theme="dark"] .bg-white {
     background-color: rgba(22, 22, 22, 0.92) !important;
     border: 1px solid rgba(255, 255, 255, 0.08);
     color: #f0f0f0;
+}
+
+[data-theme="dark"] .bg-alternate {
+    background-color: #121818 !important; /* Soft dark teal */
 }
 
 .card {
@@ -181,13 +192,40 @@ section {
     color: #ffffff !important;
     font-weight: 500;
     text-shadow: 0 1px 6px rgba(0,0,0,0.8);
+    position: relative;
+    padding-bottom: 5px;
 }
 .nav-link:hover {
     color: var(--secondary-color) !important;
 }
+.nav-link.active {
+    color: var(--secondary-color) !important;
+    font-weight: 700;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--secondary-color);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 80%;
+}
 .navbar.scrolled .nav-link {
     color: #e0e0e0 !important;
     text-shadow: none;
+}
+
+@media (min-width: 992px) {
+    .navbar-nav {
+        gap: 2rem;
+    }
 }
 
 /* =============================================
@@ -211,6 +249,14 @@ section {
     color: #fff;
 }
 
+.btn-dark {
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-dark:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
 /* =============================================
    HERO SECTION
    ============================================= */
@@ -221,6 +267,7 @@ section {
     position: relative;
     overflow: hidden;
     color: white;
+    padding-top: 100px; /* Offset for fixed navbar */
 }
 .hero-content {
     position: relative;
@@ -443,4 +490,38 @@ footer a:hover {
 }
 [data-theme="dark"] small {
     color: #aaaaaa;
+}
+
+/* Hamburger Menu Fixes */
+.navbar-toggler {
+    background-color: var(--primary-color) !important;
+}
+.navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+}
+.offcanvas {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+.offcanvas .nav-link {
+    color: #ffffff !important;
+}
+.offcanvas .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+/* Mobile Hero Buttons Wrap */
+@media (max-width: 768px) {
+    .hero-content .btn {
+        display: block;
+        width: 100%;
+        margin: 0 0 15px 0 !important;
+    }
+}
+
+/* 1024px Hero Height Fix */
+@media (max-width: 1024px) {
+    .hero-section {
+        min-height: 70vh !important;
+    }
 }

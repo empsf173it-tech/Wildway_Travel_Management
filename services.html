@@ -18,7 +18,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body style="background: url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1920&auto=format&fit=crop') no-repeat center center fixed; background-size: 100% 100%;">
+<body>
 
     <!-- Header / Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top">
@@ -28,18 +28,32 @@
                 WildWay Travel
             </a>
             
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
             
             <div class="collapse navbar-collapse" id="mainMenu">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
                 </ul>
+                
                 <div class="d-flex align-items-center gap-3">
                     <a href="signup.html" class="btn btn-primary-custom">Sign Up</a>
                 </div>
@@ -47,11 +61,36 @@
         </div>
     </nav>
 
+    <!-- Mobile Offcanvas Menu -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+        <div class="offcanvas-header">
+            <a class="navbar-brand d-flex align-items-center gap-2 offcanvas-title" id="mobileMenuLabel" href="index.html">
+                <img src="assets/images/logo.svg" alt="WildWay Logo" width="30" height="30">
+                WildWay Travel
+            </a>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column">
+            <ul class="navbar-nav mb-4">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+            <div class="d-grid gap-2 mt-4">
+                <a href="signup.html" class="btn btn-primary-custom">Sign Up</a>
+            </div>
+        </div>
+    </div>
+
     <!-- Hero Section -->
-    <section class="hero-section" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));">
+    <section class="hero-section" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1920&auto=format&fit=crop') no-repeat center center; background-size: cover;">
         <div class="container hero-content text-center">
             <h1 class="display-4 fw-bold mb-3 animate-up text-white">Our Services</h1>
-            <p class="lead text-light animate-up" style="animation-delay: 0.1s;">Everything you need for the perfect journey.</p>
+            <p class="lead text-light animate-up mb-2" style="animation-delay: 0.1s;">Everything you need for the perfect journey.</p>
+            <p class="text-light animate-up opacity-75" style="animation-delay: 0.2s; max-width: 600px; margin: 0 auto;">From seamless flight bookings to luxurious hotel reservations, we handle all the details so you can focus on enjoying the adventure.</p>
         </div>
     </section>
 
@@ -226,9 +265,10 @@
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6">
-                    <h5 class="text-white fw-bold mb-3 d-flex align-items-center gap-2">
-                        <img src="assets/images/logo.svg" alt="WildWay Logo" width="24" height="24"> WildWay
-                    </h5>
+                    <a class="navbar-brand d-inline-flex align-items-center gap-2 mb-3" href="index.html" style="padding: 0;">
+                        <img src="assets/images/logo.svg" alt="WildWay Logo" width="30" height="30">
+                        WildWay Travel
+                    </a>
                     <p class="text-secondary">Making your travel dreams a reality with expertly crafted itineraries and uncompromised service.</p>
                     <div class="d-flex gap-3 mt-3">
                         <a href="#"><i class="bi bi-facebook fs-5"></i></a>
