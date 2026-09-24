@@ -531,15 +531,15 @@ footer a:hover {
         margin: 0 0 15px 0 !important;
     }
     
-    /* Reduce hamburger icon size */
+    /* Hamburger icon size adjustment */
     .navbar-toggler {
-        padding: 0.15rem 0.3rem !important;
-        transform: scale(0.7);
+        padding: 0.25rem 0.75rem !important;
+        transform: scale(1);
         transform-origin: right center;
     }
     .navbar-toggler-icon {
-        width: 1em !important;
-        height: 1em !important;
+        width: 1.5em !important;
+        height: 1.5em !important;
     }
 }
 
