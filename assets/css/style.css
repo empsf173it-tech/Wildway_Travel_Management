@@ -510,12 +510,36 @@ footer a:hover {
     filter: invert(1) grayscale(100%) brightness(200%);
 }
 
+/* Highlight selected menu in mobile view (Offcanvas) */
+.offcanvas .nav-link.active {
+    background-color: var(--primary-color) !important;
+    color: #ffffff !important;
+    border-radius: 6px !important;
+    padding: 10px 15px !important;
+    margin-bottom: 5px !important;
+    font-weight: bold !important;
+}
+.offcanvas .nav-link.active::after {
+    display: none !important;
+}
+
 /* Mobile Hero Buttons Wrap */
 @media (max-width: 768px) {
     .hero-content .btn {
         display: block;
         width: 100%;
         margin: 0 0 15px 0 !important;
+    }
+    
+    /* Reduce hamburger icon size */
+    .navbar-toggler {
+        padding: 0.15rem 0.3rem !important;
+        transform: scale(0.7);
+        transform-origin: right center;
+    }
+    .navbar-toggler-icon {
+        width: 1em !important;
+        height: 1em !important;
     }
 }
 
